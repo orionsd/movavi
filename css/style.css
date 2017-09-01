@@ -40,7 +40,8 @@ header {
       font-size: 20px; }
   header .instruction {
     margin-top: 37px;
-    font-size: 22px; }
+    font-size: 22px;
+    font-weight: normal; }
 
 .buttons-block {
   margin-top: 45px; }
@@ -73,10 +74,22 @@ header {
   vertical-align: top;
   margin-top: 80px;
   font-size: 40px; }
-.installation-upper .text {
+
+.text {
   margin-top: 10px;
   text-align: left;
   font-size: 20px; }
+
+.vertical-line {
+  position: absolute;
+  top: 30px;
+  left: 3px;
+  width: 2px;
+  height: 2622px;
+  background: #b3b3b3; }
+
+.step-01 {
+  position: relative; }
 
 .step-01,
 .step-02,
@@ -111,6 +124,24 @@ header {
       left: -35px;
       color: #f68263;
       font-size: 34px; }
+  .step-01 .circle,
+  .step-02 .circle,
+  .step-03 .circle,
+  .step-04 .circle,
+  .step-03-01 .circle,
+  .step-03-02 .circle,
+  .step-03-03 .circle {
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 20px;
+    left: -62px;
+    background: #ffffff;
+    border: 2px solid #a9a9a9;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
   .step-01 .text,
   .step-02 .text,
   .step-03 .text,
@@ -138,9 +169,10 @@ header {
 .sw-buttons-block {
   margin: 0 auto;
   margin-top: 30px;
-  width: 800px; }
+  width: 730px; }
   .sw-buttons-block .easy,
   .sw-buttons-block .fullf {
+    position: relative;
     display: inline-block;
     vertical-align: top;
     width: 360px;
@@ -151,12 +183,26 @@ header {
     outline: none;
     cursor: pointer;
     background: #fff; }
+  .sw-buttons-block .triangle-easy,
+  .sw-buttons-block .triangle-full {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: 132px;
+    width: 0;
+    height: 0;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 30px solid #eeeeee; }
+  .sw-buttons-block .triangle-full {
+    display: none; }
   .sw-buttons-block .easy {
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px; }
   .sw-buttons-block .fullf {
     width: 363px;
-    margin-left: -3px;
+    margin-left: -4px;
     border-left: none;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px; }
@@ -171,65 +217,57 @@ header {
 .folder {
   background: #eeeeee; }
 
+.step-03-01 {
+  padding-top: 20px; }
+
+.step-03-01,
+.step-03-02,
+.step-03-03 {
+  padding-left: 90px; }
+  .step-03-01 .instruction:before,
+  .step-03-02 .instruction:before,
+  .step-03-03 .instruction:before {
+    content: "3.1.";
+    left: -65px; }
+  .step-03-01 .text,
+  .step-03-02 .text,
+  .step-03-03 .text {
+    width: 58%;
+    float: left;
+    margin-right: 30px;
+    margin-left: -62px; }
+  .step-03-01 img,
+  .step-03-02 img,
+  .step-03-03 img {
+    display: inline-block;
+    margin-top: 40px; }
+  .step-03-01 .circle,
+  .step-03-02 .circle,
+  .step-03-03 .circle {
+    left: -92px; }
+
+.step-03-02 {
+  padding-left: 90px; }
+  .step-03-02 .instruction:before {
+    content: "3.2.";
+    left: -65px; }
+
+.step-03-03 {
+  padding-left: 90px; }
+  .step-03-03 .instruction:before {
+    content: "3.3.";
+    left: -65px; }
+
+.text-final {
+  margin-top: 20px;
+  margin-left: 30px; }
+
 .easy-mode,
 .full-mode {
   padding-bottom: 40px; }
-  .easy-mode .step-03-01,
-  .full-mode .step-03-01 {
-    padding-top: 20px; }
-  .easy-mode .step-03-01,
-  .easy-mode .step-03-02,
-  .easy-mode .step-03-03,
-  .full-mode .step-03-01,
-  .full-mode .step-03-02,
-  .full-mode .step-03-03 {
-    padding-left: 90px; }
-    .easy-mode .step-03-01 .instruction:before,
-    .easy-mode .step-03-02 .instruction:before,
-    .easy-mode .step-03-03 .instruction:before,
-    .full-mode .step-03-01 .instruction:before,
-    .full-mode .step-03-02 .instruction:before,
-    .full-mode .step-03-03 .instruction:before {
-      content: "3.1.";
-      left: -65px; }
-    .easy-mode .step-03-01 .text,
-    .easy-mode .step-03-02 .text,
-    .easy-mode .step-03-03 .text,
-    .full-mode .step-03-01 .text,
-    .full-mode .step-03-02 .text,
-    .full-mode .step-03-03 .text {
-      width: 58%;
-      float: left;
-      margin-right: 30px;
-      margin-left: -62px; }
-    .easy-mode .step-03-01 img,
-    .easy-mode .step-03-02 img,
-    .easy-mode .step-03-03 img,
-    .full-mode .step-03-01 img,
-    .full-mode .step-03-02 img,
-    .full-mode .step-03-03 img {
-      display: inline-block;
-      margin-top: 40px; }
-  .easy-mode .step-03-02,
-  .full-mode .step-03-02 {
-    padding-left: 90px; }
-    .easy-mode .step-03-02 .instruction:before,
-    .full-mode .step-03-02 .instruction:before {
-      content: "3.2.";
-      left: -65px; }
-  .easy-mode .step-03-03,
-  .full-mode .step-03-03 {
-    padding-left: 90px; }
-    .easy-mode .step-03-03 .instruction:before,
-    .full-mode .step-03-03 .instruction:before {
-      content: "3.3.";
-      left: -65px; }
-    .easy-mode .step-03-03 .text-final,
-    .full-mode .step-03-03 .text-final {
-      width: 100%; }
   .easy-mode .switch-button-block,
   .full-mode .switch-button-block {
-    width: 270px;
+    width: 250px;
     margin: 0px auto;
     margin-top: 30px; }
   .easy-mode .switch-full,
@@ -250,6 +288,8 @@ header {
   .full-mode .switch-easy {
     width: 200px; }
 
+.step-04 img {
+  margin-top: 30px; }
 .step-04 .instruction:before {
   content: "4."; }
 .step-04 .text {
@@ -261,7 +301,7 @@ header {
   padding-bottom: 40px; }
 
 .product {
-  background: #ddffe4;
+  background: #e0fff7;
   padding-bottom: 60px; }
   .product .link {
     display: block;
@@ -271,6 +311,10 @@ header {
     text-decoration: none; }
     .product .link:hover {
       text-decoration: underline; }
+  .product .clear {
+    display: none; }
+  .product .buttons-block {
+    margin-top: 30px; }
   .product .win-container,
   .product .mac-container {
     float: left; }
@@ -281,7 +325,8 @@ header {
     float: left; }
   .product .info {
     float: left;
-    margin-top: 110px; }
+    margin-top: 110px;
+    margin-bottom: 35px; }
     .product .info .text {
       margin-top: 15px;
       font-size: 20px; }
@@ -378,5 +423,200 @@ footer {
       color: #3581d5; }
     footer .support .item-01 {
       margin-right: 20px; }
+
+.last-circle {
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  bottom: 0px;
+  left: -5px;
+  background: #ffffff;
+  border: 2px solid #a9a9a9;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+
+@media only screen and (min-width: 768px) and (max-width: 1140px) {
+  header,
+  .installation-upper,
+  .installation-lower,
+  .folder {
+    padding-left: 22px;
+    padding-right: 22px; }
+
+  .container {
+    width: 100%; }
+
+  .buttons-block {
+    width: 726px;
+    margin-left: auto;
+    margin-right: auto; }
+    .buttons-block .win,
+    .buttons-block .mac {
+      width: 345px;
+      height: 72px; }
+    .buttons-block .win {
+      background-position: 68px 22px; }
+    .buttons-block .mac {
+      background-position: 68px 18px; }
+
+  header {
+    height: 505px; }
+    header .banner {
+      max-width: 730px;
+      /*   margin: 0 auto;*/ }
+    header .logo {
+      background: url(../img/logo.png) right 70px no-repeat;
+      background-size: 24%; }
+    header .instruction {
+      font-size: 20px; }
+    header .slogan,
+    header .title {
+      font-size: 28px; }
+    header .list li {
+      font-size: 18px; }
+
+  .upper-block .title {
+    font-size: 28px; }
+
+  .step-01 .instruction,
+  .step-02 .instruction,
+  .step-03 .instruction,
+  .step-04 .instruction,
+  .step-03-01 .instruction,
+  .step-03-02 .instruction,
+  .step-03-03 .instruction {
+    font-size: 24px; }
+    .step-01 .instruction:before,
+    .step-02 .instruction:before,
+    .step-03 .instruction:before,
+    .step-04 .instruction:before,
+    .step-03-01 .instruction:before,
+    .step-03-02 .instruction:before,
+    .step-03-03 .instruction:before {
+      font-size: 24px; }
+  .step-01 .text,
+  .step-02 .text,
+  .step-03 .text,
+  .step-04 .text,
+  .step-03-01 .text,
+  .step-03-02 .text,
+  .step-03-03 .text {
+    width: 55%;
+    font-size: 16px;
+    margin-right: 20px; }
+  .step-01 img,
+  .step-02 img,
+  .step-03 img,
+  .step-04 img,
+  .step-03-01 img,
+  .step-03-02 img,
+  .step-03-03 img {
+    max-width: 49%; }
+  .step-01 .circle,
+  .step-01 .last-circle,
+  .step-02 .circle,
+  .step-02 .last-circle,
+  .step-03 .circle,
+  .step-03 .last-circle,
+  .step-04 .circle,
+  .step-04 .last-circle,
+  .step-03-01 .circle,
+  .step-03-01 .last-circle,
+  .step-03-02 .circle,
+  .step-03-02 .last-circle,
+  .step-03-03 .circle,
+  .step-03-03 .last-circle {
+    background: #000;
+    border-color: #000; }
+  .step-01 .circle,
+  .step-02 .circle,
+  .step-03 .circle,
+  .step-04 .circle,
+  .step-03-01 .circle,
+  .step-03-02 .circle,
+  .step-03-03 .circle {
+    top: 12px; }
+
+  .step-01 .text,
+  .step-02 .text,
+  .step-03 .text,
+  .step-04 .text {
+    width: 50.5%; }
+
+  .step-01 .text,
+  .upper-block .text {
+    width: 100%;
+    font-size: 16px; }
+  .step-01 .instruction,
+  .upper-block .instruction {
+    font-size: 24px; }
+    .step-01 .instruction:before,
+    .upper-block .instruction:before {
+      font-size: 24px; }
+
+  .text-final {
+    font-size: 16px; }
+
+  .sw-buttons-block {
+    width: 560px; }
+    .sw-buttons-block .easy,
+    .sw-buttons-block .fullf {
+      width: 276px;
+      height: 66px; }
+    .sw-buttons-block .triangle-easy,
+    .sw-buttons-block .triangle-full {
+      left: 88px; }
+
+  .vertical-line {
+    top: 22px;
+    height: 2222px;
+    background: #000; }
+
+  .product .product-block {
+    width: 710px;
+    margin: 0 auto; }
+  .product .buttons-block {
+    width: 730px; }
+  .product .clear {
+    display: block; }
+  .product .title {
+    font-size: 28px; }
+  .product .img-container {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 0; }
+    .product .img-container img {
+      max-width: 70%; }
+  .product .info {
+    margin-top: 50px;
+    margin-bottom: 0; }
+    .product .info .text,
+    .product .info .list-item {
+      font-size: 16px; }
+
+  .guides .title {
+    font-size: 28px; }
+  .guides .guides-table .link {
+    width: 320px;
+    font-size: 16px; }
+
+  footer .title {
+    font-size: 28px; }
+  footer .support {
+    width: 710px; }
+    footer .support .item-01,
+    footer .support .item-02 {
+      width: 345px;
+      height: 130px; }
+      footer .support .item-01 .link img,
+      footer .support .item-02 .link img {
+        width: 95px; }
+      footer .support .item-01 .link .text,
+      footer .support .item-02 .link .text {
+        margin-top: 40px;
+        margin-left: -15px;
+        font-size: 18px; } }
 
 /*# sourceMappingURL=style.css.map */

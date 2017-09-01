@@ -57,6 +57,7 @@ header {
   .instruction {
     margin-top: 37px;
     font-size: 22px;
+    font-weight: normal;
   }
 }
 
@@ -104,13 +105,25 @@ header {
     margin-top: 80px;
     font-size: 40px;
   }
+}
 
-  .text {
-    margin-top: 10px;
-    text-align: left;
-    font-size: 20px;
-  }
+.text {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 20px;
+}
 
+.vertical-line {
+  position: absolute;
+  top: 30px;
+  left: 3px;
+  width: 2px;
+  height: 2622px;
+  background: #b3b3b3;
+}
+
+.step-01 {
+  position: relative;
 }
 
 .step-01,
@@ -119,8 +132,7 @@ header {
 .step-04,
 .step-03-01,
 .step-03-02,
-.step-03-03,
-{
+.step-03-03 {
   padding-left: 60px;
   margin-top: 50px;
 
@@ -138,6 +150,20 @@ header {
       color: #f68263;
       font-size: 34px;
     }
+  }
+
+  .circle {
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 20px;
+    left: -62px;
+    background: #ffffff;
+    border: 2px solid #a9a9a9;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
   }
 
   .text {
@@ -176,10 +202,11 @@ header {
 .sw-buttons-block {
   margin: 0 auto;
   margin-top: 30px;
-  width: 800px;
+  width: 730px;
 
   .easy,
   .fullf {
+    position: relative;
     display: inline-block;
     vertical-align: top;
     width: 360px;
@@ -192,14 +219,33 @@ header {
     background: #fff;
   }
 
+  .triangle-easy,
+  .triangle-full {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: 132px;
+    width: 0;
+    height: 0;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 30px solid #eeeeee;
+  }
+
+  .triangle-full {
+    display: none;
+  }
+
   .easy {
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
+
   }
 
   .fullf {
     width: 363px;
-    margin-left: -3px;
+    margin-left: -4px;
     border-left: none;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
@@ -221,63 +267,70 @@ header {
   background: #eeeeee;
 }
 
+.step-03-01 {
+  padding-top: 20px;
+}
+
+.step-03-01,
+.step-03-02,
+.step-03-03 {
+  padding-left: 90px;
+  .instruction {
+    &:before {
+      content: "3.1.";
+      left: -65px;
+    }
+  }
+
+  .text {
+    width: 58%;
+    float: left;
+    margin-right: 30px;
+    margin-left: -62px;
+  }
+
+  img {
+    display: inline-block;
+    margin-top: 40px;
+  }
+
+  .circle {
+    left: -92px;
+  }
+
+}
+
+.step-03-02 {
+  padding-left: 90px;
+  .instruction {
+    &:before {
+      content: "3.2.";
+      left: -65px;
+    }
+  }
+}
+
+.step-03-03 {
+  padding-left: 90px;
+  .instruction {
+    &:before {
+      content: "3.3.";
+      left: -65px;
+    }
+  }
+}
+
+.text-final {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
 .easy-mode,
 .full-mode {
   padding-bottom: 40px;
 
-  .step-03-01 {
-    padding-top: 20px;
-  }
-
-  .step-03-01,
-  .step-03-02,
-  .step-03-03 {
-    padding-left: 90px;
-    .instruction {
-      &:before {
-        content: "3.1.";
-        left: -65px;
-      }
-    }
-
-    .text {
-      width: 58%;
-      float: left;
-      margin-right: 30px;
-      margin-left: -62px;
-    }
-
-    img {
-      display: inline-block;
-      margin-top: 40px;
-    }
-  }
-
-  .step-03-02 {
-    padding-left: 90px;
-    .instruction {
-      &:before {
-        content: "3.2.";
-        left: -65px;
-      }
-    }
-  }
-
-  .step-03-03 {
-    padding-left: 90px;
-    .instruction {
-      &:before {
-        content: "3.3.";
-        left: -65px;
-      }
-    }
-    .text-final {
-      width: 100%;
-    }
-  }
-
   .switch-button-block {
-    width: 270px;
+    width: 250px;
     margin: 0px auto;
     margin-top: 30px;
   }
@@ -303,10 +356,16 @@ header {
 }
 
 .step-04 {
+
+  img {
+    margin-top: 30px;
+  }
+
   .instruction {
     &:before {
       content: "4.";
     }
+
   }
 
   .text {
@@ -322,7 +381,7 @@ header {
 }
 
 .product {
-  background: #ddffe4;
+  background: #e0fff7;
   padding-bottom: 60px;
 
   .link {
@@ -334,6 +393,14 @@ header {
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  .clear {
+    display: none;
+  }
+
+  .buttons-block {
+    margin-top: 30px;
   }
 
   .win-container,
@@ -353,6 +420,7 @@ header {
   .info {
     float: left;
     margin-top: 110px;
+    margin-bottom: 35px;
 
     .text {
       margin-top: 15px;
@@ -399,7 +467,7 @@ header {
     font-size: 40px;
   }
 
-  .guides-table{
+  .guides-table {
     margin: 0 auto;
     margin-top: 7px;
     border-collapse: collapse;
@@ -485,6 +553,255 @@ footer {
     .item-01 {
       margin-right: 20px;
     }
+  }
+}
+
+.last-circle {
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  bottom: 0px;
+  left: -5px;
+  background: #ffffff;
+  border: 2px solid #a9a9a9;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1140px) {
+
+  header,
+  .installation-upper,
+  .installation-lower,
+  .folder {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .buttons-block {
+    width: 726px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .win,
+    .mac {
+      width: 345px;
+      height: 72px;
+    }
+
+    .win {
+      background-position: 68px 22px;
+    }
+
+    .mac {
+      background-position: 68px 18px;
+    }
 
   }
+
+  header {
+    height: 505px;
+    
+    .banner {
+      max-width: 730px;
+   /*   margin: 0 auto;*/
+    }
+
+    .logo {
+      background: url(../img/logo.png) right 70px no-repeat;
+      background-size: 24%;
+    }
+
+    .instruction {
+      font-size: 20px;
+    }
+
+    .slogan,
+    .title {
+      font-size: 28px;
+    }
+
+    .list {
+      li {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .upper-block {
+    .title {
+      font-size: 28px;
+    }
+  }
+
+  .step-01,
+  .step-02,
+  .step-03,
+  .step-04,
+  .step-03-01,
+  .step-03-02,
+  .step-03-03 {
+    .instruction {
+      font-size: 24px;
+      &:before {
+        font-size: 24px;
+      }
+    }
+
+    .text {
+      width: 55%;
+      font-size: 16px;
+      margin-right: 20px;
+    }
+
+    img {
+      max-width: 49%;
+    }
+
+    .circle,
+    .last-circle {
+      background: #000;
+      border-color: #000;
+    }
+
+    .circle {
+      top: 12px;
+    }
+
+  }
+
+  .step-01,
+  .step-02,
+  .step-03,
+  .step-04 {
+    .text {
+      width: 50.5%;
+    }
+  }
+
+  .step-01,
+  .upper-block {
+    .text {
+      width: 100%;
+      font-size: 16px;
+    }
+    .instruction {
+      font-size: 24px;
+      &:before {
+        font-size: 24px;
+      }
+    }
+  }
+
+
+  .text-final {
+    font-size: 16px;
+  }
+
+  .sw-buttons-block {
+    width: 560px;
+    .easy,
+    .fullf {
+      width: 276px;
+      height: 66px;
+    }
+    .triangle-easy,
+    .triangle-full {
+      left: 88px;
+    }
+  }
+
+  .vertical-line {
+    top: 22px;
+    height: 2222px;
+    background: #000;
+  }
+
+  .product {
+
+    .product-block {
+      width: 710px;
+      margin: 0 auto;
+    }
+
+    .buttons-block {
+      width: 730px;
+    }
+
+    .clear {
+      display: block;
+    }
+
+    .title {
+      font-size: 28px;
+    }
+
+    .img-container {
+      margin-top: 50px;
+      margin-left: 20px;
+      margin-right: 0;
+      img {
+        max-width: 70%;
+      }
+    }
+
+    .info {
+      margin-top: 50px;
+      margin-bottom: 0;
+      .text,
+      .list-item {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .guides {
+    .title {
+      font-size: 28px;
+    }
+    .guides-table {
+      .link {
+        width: 320px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  footer {
+    .title {
+      font-size: 28px;
+    }
+
+    .support {
+      width: 710px;
+      .item-01,
+      .item-02 {
+        width: 345px;
+        height: 130px;
+
+        .link {
+          img {
+            width: 95px;
+          }
+          .text {
+            margin-top: 40px;
+            margin-left: -15px;
+            font-size: 18px;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+
 }
