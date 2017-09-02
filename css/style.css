@@ -75,10 +75,14 @@ header {
   margin-top: 80px;
   font-size: 40px; }
 
-.text {
+.text,
+.text-320 {
   margin-top: 10px;
   text-align: left;
   font-size: 20px; }
+
+.text-320 {
+  display: none; }
 
 .vertical-line {
   position: absolute;
@@ -150,7 +154,7 @@ header {
   .step-03-02 .text,
   .step-03-03 .text {
     margin-top: 30px;
-    margin-left: -34px;
+    margin-left: -36px;
     font-size: 20px; }
 
 .step-02 .instruction:before {
@@ -199,13 +203,21 @@ header {
     display: none; }
   .sw-buttons-block .easy {
     border-bottom-left-radius: 8px;
-    border-top-left-radius: 8px; }
+    -moz-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    -moz-border-top-left-radius: 8px;
+    -webkit-border-top-left-radius: 8px; }
   .sw-buttons-block .fullf {
     width: 363px;
     margin-left: -4px;
     border-left: none;
     border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px; }
+    -moz-border-bottom-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    -moz-border-top-right-radius: 8px;
+    -webkit-border-top-right-radius: 8px; }
   .sw-buttons-block .active {
     background: #3581d5 !important;
     border: 3px solid #3581d5 !important;
@@ -321,11 +333,12 @@ header {
   .product .mac-container .link {
     margin-left: 30px; }
   .product .img-container {
-    margin: 110px 70px 0;
+    margin: 0px 70px 0;
+    margin-right: 90px;
     float: left; }
   .product .info {
     float: left;
-    margin-top: 110px;
+    margin-top: 50px;
     margin-bottom: 35px; }
     .product .info .text {
       margin-top: 15px;
@@ -346,6 +359,9 @@ header {
     padding-left: 55px;
     font-size: 20px; }
   .product .title {
+    margin-left: 212px;
+    padding-top: 75px;
+    text-align: center;
     font-size: 40px; }
 
 .guides {
@@ -415,7 +431,8 @@ footer {
         float: left;
         margin-top: 15px;
         margin-left: 45px;
-        margin-right: 45px; }
+        margin-right: 45px;
+        border: none; }
     footer .support .text {
       display: inline-block;
       margin-top: 55px;
@@ -441,7 +458,8 @@ footer {
   header,
   .installation-upper,
   .installation-lower,
-  .folder {
+  .folder,
+  .product {
     padding-left: 22px;
     padding-right: 22px; }
 
@@ -584,17 +602,19 @@ footer {
   .product .title {
     font-size: 28px; }
   .product .img-container {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 20px;
     margin-right: 0; }
     .product .img-container img {
       max-width: 70%; }
   .product .info {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 0; }
     .product .info .text,
     .product .info .list-item {
       font-size: 16px; }
+  .product .title {
+    padding-top: 30px; }
 
   .guides .title {
     font-size: 28px; }
@@ -618,5 +638,259 @@ footer {
         margin-top: 40px;
         margin-left: -15px;
         font-size: 18px; } }
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  header,
+  .installation-upper,
+  .installation-lower,
+  .folder,
+  .product {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .buttons-block {
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto; }
+    .buttons-block .win,
+    .buttons-block .mac {
+      display: block;
+      width: 286px;
+      height: 70px;
+      margin: 0 auto; }
+    .buttons-block .win {
+      background-position: 45px 22px; }
+    .buttons-block .mac {
+      margin-top: 30px;
+      background-position: 45px 18px; }
+
+  header {
+    height: 775px;
+    background: url("../img/header-bg_320.png") top center no-repeat; }
+    header .slogan,
+    header .title {
+      font-size: 25px; }
+    header .slogan {
+      line-height: 34px; }
+    header .title {
+      margin-top: 20px; }
+    header .list {
+      margin-top: 17px; }
+      header .list li {
+        font-size: 18px; }
+    header .instruction {
+      margin-top: 20px;
+      line-height: 34px;
+      font-size: 20px; }
+
+  .installation-upper .title {
+    font-size: 28px; }
+  .installation-upper .upper-block p:nth-child(2) {
+    display: none; }
+  .installation-upper .text {
+    font-size: 16px;
+    width: 100%;
+    margin-left: -24px; }
+  .installation-upper .text-320 {
+    display: block;
+    font-size: 16px; }
+  .installation-upper .sw-buttons-block {
+    margin-left: -60px;
+    margin-bottom: -50px; }
+    .installation-upper .sw-buttons-block .easy,
+    .installation-upper .sw-buttons-block .fullf {
+      width: 170px;
+      height: 64px;
+      font-size: 16px;
+      color: #7b7b7b;
+      border: none;
+      background: #f6f6f6; }
+    .installation-upper .sw-buttons-block .easy {
+      border-top-right-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-top-right-radius: 5px; }
+    .installation-upper .sw-buttons-block .fullf {
+      margin-left: 10px;
+      border-top-left-radius: 5px;
+      -webkit-border-top-left-radius: 5px;
+      -moz-border-top-left-radius: 5px; }
+    .installation-upper .sw-buttons-block .active {
+      color: #000 !important;
+      font-weight: bold;
+      background: #eeeeee !important;
+      border: none !important; }
+    .installation-upper .sw-buttons-block .triangle-easy,
+    .installation-upper .sw-buttons-block .triangle-full {
+      display: none; }
+
+  .step-03 {
+    margin-top: 0;
+    padding-top: 0; }
+
+  .step-01,
+  .step-02,
+  .step-03,
+  .step-04,
+  .step-03-01,
+  .step-03-02,
+  .step-03-03 {
+    padding-left: 29px; }
+    .step-01 .instruction,
+    .step-02 .instruction,
+    .step-03 .instruction,
+    .step-04 .instruction,
+    .step-03-01 .instruction,
+    .step-03-02 .instruction,
+    .step-03-03 .instruction {
+      font-size: 24px; }
+      .step-01 .instruction:before,
+      .step-02 .instruction:before,
+      .step-03 .instruction:before,
+      .step-04 .instruction:before,
+      .step-03-01 .instruction:before,
+      .step-03-02 .instruction:before,
+      .step-03-03 .instruction:before {
+        left: -27px;
+        font-size: 24px; }
+    .step-01 img,
+    .step-02 img,
+    .step-03 img,
+    .step-04 img,
+    .step-03-01 img,
+    .step-03-02 img,
+    .step-03-03 img {
+      display: block;
+      margin-right: auto;
+      margin-left: -24px;
+      max-width: 107%; }
+    .step-01 .vertical-line,
+    .step-01 .circle,
+    .step-01 .last-circle,
+    .step-02 .vertical-line,
+    .step-02 .circle,
+    .step-02 .last-circle,
+    .step-03 .vertical-line,
+    .step-03 .circle,
+    .step-03 .last-circle,
+    .step-04 .vertical-line,
+    .step-04 .circle,
+    .step-04 .last-circle,
+    .step-03-01 .vertical-line,
+    .step-03-01 .circle,
+    .step-03-01 .last-circle,
+    .step-03-02 .vertical-line,
+    .step-03-02 .circle,
+    .step-03-02 .last-circle,
+    .step-03-03 .vertical-line,
+    .step-03-03 .circle,
+    .step-03-03 .last-circle {
+      display: none; }
+    .step-01 .text,
+    .step-02 .text,
+    .step-03 .text,
+    .step-04 .text,
+    .step-03-01 .text,
+    .step-03-02 .text,
+    .step-03-03 .text {
+      font-size: 16px;
+      width: 100%;
+      margin-left: -24px; }
+
+  .step-03 .sw-buttons-block {
+    width: 360px; }
+
+  .step-03-01 .instruction,
+  .step-03-02 .instruction,
+  .step-03-03 .instruction {
+    padding-left: 20px; }
+
+  .text-final {
+    margin-left: 10px;
+    font-size: 16px; }
+
+  .easy-mode .switch-full,
+  .easy-mode .switch-easy,
+  .full-mode .switch-full,
+  .full-mode .switch-easy {
+    font-size: 16px; }
+  .easy-mode .switch-button-block,
+  .easy-mode .switch-button-block,
+  .full-mode .switch-button-block,
+  .full-mode .switch-button-block {
+    width: 210px; }
+
+  .product .title {
+    margin-left: 0;
+    font-size: 28px; }
+  .product .img-container {
+    float: none;
+    text-align: center;
+    margin-top: 30px; }
+    .product .img-container img {
+      width: 155px; }
+  .product .list .slideshow {
+    background-position: 0 4px; }
+  .product .list .join {
+    background-position: 0 4px; }
+  .product .list .titles {
+    background-position: 5px 4px; }
+  .product .list .adjust {
+    background-position: 0 4px; }
+  .product .list li {
+    min-height: 35px;
+    margin-top: 20px;
+    line-height: 25px;
+    font-size: 16px; }
+  .product .link {
+    text-align: center; }
+  .product .mac-container .link {
+    margin-left: 0; }
+  .product .info {
+    float: none;
+    max-width: 430px;
+    min-width: 290px;
+    margin-right: auto;
+    margin-left: auto; }
+  .product .info .text {
+    margin-top: 0;
+    font-size: 16px; }
+  .product .buttons-block {
+    width: 290px; }
+
+  .guides .title {
+    font-size: 28px; }
+  .guides .guides-table tr,
+  .guides .guides-table td {
+    display: block; }
+  .guides .guides-table .link {
+    width: 275px;
+    font-size: 16px; }
+
+  footer .title {
+    font-size: 28px; }
+  footer .support {
+    width: inherit; }
+    footer .support .item-01,
+    footer .support .item-02 {
+      float: none;
+      width: 285px;
+      height: 130px;
+      margin: 0 auto; }
+      footer .support .item-01 .link,
+      footer .support .item-02 .link {
+        text-decoration: none; }
+        footer .support .item-01 .link img,
+        footer .support .item-02 .link img {
+          float: left;
+          width: 100px;
+          margin-left: 16px;
+          margin-right: 16px; }
+        footer .support .item-01 .link .text,
+        footer .support .item-02 .link .text {
+          padding-top: 42px;
+          margin-top: 0;
+          font-size: 16px;
+          display: block; }
+    footer .support .item-02 {
+      margin-top: 30px; } }
 
 /*# sourceMappingURL=style.css.map */
